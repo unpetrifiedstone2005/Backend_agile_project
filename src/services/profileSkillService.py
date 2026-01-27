@@ -1,7 +1,7 @@
 from src.database.models import UserProfile
 class ProfileDraftSkillService:
     """
-    Handles add/remove role operations during profile creation.
+    Handles add/remove skill operations during profile creation.
     (no DB writes) unless create button is pressed.
     """
 
