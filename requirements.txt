@@ -1,4 +1,4 @@
-pytest
-dataclasses
-abc
+fastapi
+uvicorn
 pydantic
+pytest
