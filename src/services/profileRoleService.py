@@ -1,14 +1,15 @@
-from src.database.models import UserProfile
+from src.database.models import ProfileDraft
+from src.database.role_repository import RoleRepository
 class ProfileDraftRoleService:
     """
     Handles add/remove role operations during profile creation.
     Works ONLY on ProfileDraft (no DB writes).
     """
 
-    def __init__(self, role_repo):
+    def __init__(self, role_repo: RoleRepository):
         self.role_repo = role_repo
 
-    def add_role(self, draft:UserProfile, role_id: int) -> None:
+    def add_role(self, draft:ProfileDraft, role_id: int) -> None:
         # validate role exists in fixed DB data
         if not self.role_repo.exists_by_id(role_id):
             raise ValueError("Invalid role ID")
@@ -19,7 +20,7 @@ class ProfileDraftRoleService:
 
         draft.roles.append(role_id)
 
-    def remove_role(self, draft:UserProfile, role_id: int) -> None:
+    def remove_role(self, draft:ProfileDraft, role_id: int) -> None:
         if role_id not in draft.roles:
             raise ValueError("Role not present in draft")
 

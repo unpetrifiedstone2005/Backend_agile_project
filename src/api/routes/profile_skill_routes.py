@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from src.api.schemas.profile_skill_req import AddSkillRequest, RemoveSkillRequest
-from src.services.profileSkillServices import ProfileDraftSkillService
+from src.services.profileSkillService import ProfileDraftSkillService
 from src.database.skill_repository import SkillRepository
 from src.database.models import UserProfile
 
