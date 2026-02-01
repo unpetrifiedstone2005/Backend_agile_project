@@ -15,5 +15,12 @@ __pycache__/
 .vscode/
 .DS_Store
 
+# Alembic
+alembic/versions/__pycache__/
 
-.pytest_cache/
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
