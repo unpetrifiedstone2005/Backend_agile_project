@@ -2,9 +2,11 @@
 venv/
 
 # Python cache
+# --- Python Cache ---
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
 
 # Environment variables
 .env
