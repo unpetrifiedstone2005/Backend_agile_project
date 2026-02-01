@@ -2,9 +2,11 @@
 venv/
 
 # Python cache
+# --- Python Cache ---
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
 
 # Environment variables
 .env
@@ -12,3 +14,6 @@ __pycache__/
 # Editor / OS junk
 .vscode/
 .DS_Store
+
+
+.pytest_cache/

@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from src.api.schemas.profile_role_req import AddRoleRequest, RemoveRoleRequest
-from src.services.profileRoleServices import ProfileDraftRoleService
+from src.api.schemas.profiles_role_req import AddRoleRequest, RemoveRoleRequest
+from src.services.profileRoleService import ProfileDraftRoleService
 from src.database.role_repository import RoleRepository
 from src.database.models import UserProfile
 
